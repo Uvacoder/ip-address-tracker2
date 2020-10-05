@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+#mapid {
+    height: 60vh;
+    position: relative;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.container .container-top {
+    padding: 2.5rem 1.5rem;
+    background-image: url(../images/pattern-bg.png);
+    /* background-image: url(https://besthqwallpapers.com/Uploads/25-5-2019/93773/thumb2-blue-matrix-background-4k-artwork-digits-matrix-texture.jpg); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    height: 40vh;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+input {
+    padding: 1rem 1.25rem;
+    border: none;
+    width: 30%;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #181A1B;
+}
+
+input::placeholder {
+    opacity: 0.6;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+form {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    background-color: hsl(0, 0%, 17%);
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 59%);
+}
+
+form img {
+    padding: 0 1rem;
+}
+
+.map__container {
+    position: relative;
+    /* background-color: white;
+     */
+}
+
+.infos {
+    background-color: #181A1B;
+    color: white;
+    border-radius: 1.25rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: -17%;
+    transform: translateX(-50%);
+    min-height: 9.5rem;
+    z-index: 99999;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+
+.infos .item label {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 2px;
+}
+
+.infos .item {
+    text-align: left;
+    flex: 0.25;
+    position: relative;
+    margin: 22px;
+}
+
+.item:not(:first-child)::before {
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: rgb(211, 206, 206);
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 800px) {
+    .infos {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .infos .item {
+        text-align: center;
+        margin-bottom: 0.625rem;
+    }
+    .item:not(:first-child)::before {
+        display: none;
+    }
+    h3 {
+        margin-top: 0.5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    input {
+        width: 80%;
+    }
+}

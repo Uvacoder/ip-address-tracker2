@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/index.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>IP Address Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-top">
+            <h1>IP Address Tracker</h1>
+            <form action="/" method="GET" id="inputForm">
+                <input type="text" id="ipInput" placeholder="Search for any IP address or domain" aria-labelledby="my input button">
+                <button type="submit" name="ip input submit"><img src="./images/icon-arrow.svg" alt=""></button>
+            </form>
+        </div>
+        <div class="map__container">
+            <div class="infos">
+                <div class="item">
+                    <label for="ip">IP Address</label>
+                    <h3 id="ip"></h3>
+                </div>
+                <div class="item">
+                    <label for="location">Location</label>
+                    <h3 id="location"></h3>
+                </div>
+                <div class="item">
+                    <label for="country">Country</label>
+                    <h3 id="country"></h3>
+                </div>
+                <div class="item">
+                    <label for="country">ISP</label>
+                    <h3 id="isp"></h3>
+                </div>
+            </div>
+            <div id="mapid">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
